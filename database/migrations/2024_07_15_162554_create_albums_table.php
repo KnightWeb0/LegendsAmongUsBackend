@@ -15,10 +15,12 @@ return new class extends Migration
     {
         Schema::create('albums', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(Artist::class); //one album can have many artists no this not true
+           // $table->foreignIdFor(Artist::class); //one album can have many artists no this not true ye or a band ?
             // an album belongs to an artist
             //but for now it belongs to many
             // $table->foreignIdFor(Bands::class); an a
+             // an album belongs to a band, and a band can have many albums
+             $table->foreignIdFor(Bands::class);
             $table->string('cover');
             $table->string('title');
             $table->integer('amount_of_songs');

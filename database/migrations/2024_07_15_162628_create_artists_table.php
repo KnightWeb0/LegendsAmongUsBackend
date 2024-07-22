@@ -17,12 +17,12 @@ return new class extends Migration
             $table->string('image');
             $table->string('first_name');
             $table->string('surname');
+            $table->string('stagename');
             $table->integer('age');
             $table->string('gender');
-            $table->string('role');
             $table->foreignIdFor(Bands::class); //an Artist belongs to a band
             $table->boolean('has_band'); //if false = solo if true = is with a band
-            $table->string('past_bands');
+            // $table->string('past_bands');
             $table->timestamps();
         });
     }
