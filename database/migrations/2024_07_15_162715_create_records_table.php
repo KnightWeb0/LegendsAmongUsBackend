@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('records', function (Blueprint $table) {
             $table->id();
             $table->string('logo');
-            $table->string('Label_name');
+            $table->string('label_name');
             //$table->foreignIdFor(Artist::class);
             $table->timestamps();
         });

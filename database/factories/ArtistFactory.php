@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Artist;
 use App\Models\Bands;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -15,10 +16,15 @@ class ArtistFactory extends Factory
      *
      * @return array<string, mixed>
      */
+
+     protected $model = Artist::class;
+
+
     public function definition(): array
     {
         return [
-            'band_id' => Bands::factory(),
+            // 'bands_id' => Bands::factory(),
+            'image'=> fake()->imageUrl(),
             'first_name' => fake()->firstName(),
             'surname' => fake()->lastName(),
             'stagename' => fake()->name(),

@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('bands', function (Blueprint $table) {
             $table->id();
             $table->string('band_name');
-            $table->foreignIdFor(Artist::class)->constrained()->cascadeOnDelete();
+            $table->foreignIdFor(Artist::class)->nullable();
             $table->string('genre');
             $table->timestamps();
         });

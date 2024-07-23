@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
           //  $table->foreignIdFor(Artist::class); // a song can have many artists
           //a song belongs to an album but an album can have many songs
-            $table->foreignIdFor(Album::class)->constrained()->cascadeOnDelete();
+            $table->foreignIdFor(Album::class)->nullable();
             $table->string('title');
             $table->string('duration');
             $table->integer('plays');

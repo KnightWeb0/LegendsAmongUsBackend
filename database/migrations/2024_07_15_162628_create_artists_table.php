@@ -20,8 +20,8 @@ return new class extends Migration
             $table->string('stagename');
             $table->integer('age');
             $table->string('gender');
-            $table->foreignIdFor(Bands::class); //an Artist belongs to a band
-            $table->boolean('has_band'); //if false = solo if true = is with a band
+            $table->foreignIdFor(Bands::class)->nullable(); //an Artist belongs to a band
+            $table->string('has_band'); //if false = solo if true = is with a band
             // $table->string('past_bands');
             $table->timestamps();
         });

@@ -2,6 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Models\Artist;
+use App\Models\Bands;
+use Faker\Core\Color;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -14,10 +17,19 @@ class BandsFactory extends Factory
      *
      * @return array<string, mixed>
      */
+
+     protected $model = Bands::class;
+
+
     public function definition(): array
     {
         return [
             //
+            'band_name' => fake()->word(),
+            // 'artist_id' => Artist::factory(),
+            'genre' => fake()->word(),
+
+
         ];
     }
 }

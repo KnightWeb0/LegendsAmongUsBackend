@@ -20,7 +20,7 @@ return new class extends Migration
             //but for now it belongs to many
             // $table->foreignIdFor(Bands::class); an a
              // an album belongs to a band, and a band can have many albums
-             $table->foreignIdFor(Bands::class);
+             $table->foreignIdFor(Bands::class)->nullable();
             $table->string('cover');
             $table->string('title');
             $table->integer('amount_of_songs');
